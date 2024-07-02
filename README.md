@@ -34,7 +34,7 @@ Welcome to the JavaScript DSA Interview Questions repository! Here, you will fin
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/javascript-dsa-interview-questions.git
+    git clone https://github.com/Satyam9169/javascript-dsa-interview-questions.git
     ```
 
 2. **Navigate to the project directory:**
