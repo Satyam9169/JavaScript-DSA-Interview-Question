@@ -15,7 +15,7 @@ const sortString = (arr) => {
                                                                       //  Efficiency: repeat is optimized for performance in modern JavaScript engines,
                                                                       //  making it an efficient way to build a string.
                                                                       //  However, if you prefer to avoid repeat, you can achieve the same result using 
-                                                                      // a loop. Here's an alternative version of the function without using repeat:
+                                                                      // a loop.
     }
     return sortedString;
 }
