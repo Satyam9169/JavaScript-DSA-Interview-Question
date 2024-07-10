@@ -1,5 +1,5 @@
 // sort the string TC => O(n), SC => O(1);
-let arr = "geeksforgeeks" ; // eeeefggkkorss
+let arr = "geeksforgeeks"; // eeeefggkkorss
 //let arr = "edsab"; // abdes
 const sortString = (arr) => {
     let count = new Array(26).fill(0);
