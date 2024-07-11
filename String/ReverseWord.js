@@ -1,24 +1,52 @@
 function ReverseWord(str) {
-    let word = str.split(' ');
+    let len = str.length, result = '', word = '', words = [];
 
-    function reverse(str) {
-        let start = 0, end = str.length - 1;
-        while (start <= end) {
-            let temp = str[start];
-            str[start] = str[end];
-            str[end] = temp;
-            start++, end--;
+    for (let i = 0; i < len; i++) {
+        let char = str.charAt(i);
+        if (char !== " ") {
+            word += char;
+        } else if (word.length > 0) {
+            words.push(word);
+            word = "";
         }
-        return str;
     }
 
-    let reverseString = reverse(word);
-    return reverseString.join(' ');
+    if (word.length > 0) { // this is for last word
+        words.push(word);
+    }
+
+    for (let i = words.length - 1; i >= 0; i--) { // here we are giving the space with string
+        if (result.length > 0) {
+            result += " ";
+        }
+        result += words[i];
+    }
+    return result;
 }
 
 console.log(ReverseWord('satyam agrahari'));
-console.log(ReverseWord('Hello world!'));
-console.log(ReverseWord('The quick brown fox'));
-console.log(ReverseWord('a b c d e'));
-console.log(ReverseWord('singleWord'));
-console.log(ReverseWord(''));
+console.log(ReverseWord('  Hello World  '));
+console.log(ReverseWord('the sky is blue'));
+console.log(ReverseWord('a good   example'));
+
+// THIS IS FIRST APPROACH
+// function ReverseWord(str) {
+//     let word = '', result = '', len = str.length;
+//     for (let i = 0; i < len; i++) {
+//         let char = str.charAt(i)
+//         if (char !== ' ') {
+//             word += char;
+//         } else if (word.length > 0) {
+//             result = " " + word + result;
+//             word = "";
+//         }
+//     }
+
+//     if (word.length > 0) {
+//         result = " " + word + result;
+//     }
+
+//     return result.trim();
+// }
+
+
