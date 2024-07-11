@@ -13,10 +13,10 @@ function groupAnagram(strs) {
         const key = count.join('#');
 
         if (hashmap[key]) {
-            hashmap[key].push(word)
+            hashmap[key].push(word) // those firs time exists than it will access and create a property in map
         }
         else {
-            hashmap[key] = [word];
+            hashmap[key] = [word]; // if it is already exists with same frequency then it will stored in the same array
         }
     }
     return Object.values(hashmap);
