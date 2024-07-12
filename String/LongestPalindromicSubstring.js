@@ -126,6 +126,8 @@ Final Result:
 
 start = 0, end = 2.
 s.substring(start, end + 1) returns "bab" or "aba".
+
+
 Detailed Walkthrough of expandAroundCenter
 Let's focus on the function expandAroundCenter for a specific iteration:
 
