@@ -57,4 +57,4 @@ If you have any questions or suggestions, feel free to reach out:
 - GitHub: [https://github.com/Satyam9169](https://github.com/Satyam9169))
 - Email: [satyamagrahari952@gmail.com](mailto:satyamagrahari952@gmail.com)
 
-Project Link: [https://github.com/Satyam9169/javascript-dsa-interview-questions](https://github.com/Satyam9169/javascript-dsa-interview-questions)
+Project Link: https://github.com/Satyam9169/JavaScript-DSA-Interview-Question
