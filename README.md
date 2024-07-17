@@ -10,6 +10,7 @@ Welcome to the JavaScript DSA Interview Questions repository! Here, you will fin
 
 - [Array Questions](#array-questions)
 - [String Questions](#string-questions)
+- [Math Questions](#Math-questions)
 - [Linked List Questions](#linked-list-questions)
 - [Tree Questions](#tree-questions)
 - [Graph Questions](#graph-questions)
@@ -24,6 +25,11 @@ Welcome to the JavaScript DSA Interview Questions repository! Here, you will fin
 ### String Questions
 
 - https://github.com/Satyam9169/JavaScript-DSA-Interview-Question/tree/master/String
+- ...
+
+### Math Questions
+
+- https://github.com/Satyam9169/JavaScript-DSA-Interview-Question/tree/master/Math
 - ...
 
 ## How to Use
