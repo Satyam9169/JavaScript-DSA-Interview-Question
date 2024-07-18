@@ -1,14 +1,16 @@
-const convert = (num) => {
-
-    let rem, decimal = 0, mul = 1;
-    while (num != 0) {
-        rem = num % 10;
-        num = Math.floor(num / 10);
-        decimal += rem * Math.pow(2, mul);
-        mul *= 2;
-        // ++mul;
+// binary to decimal
+function BintoDeci(num){
+    let n = num;
+    let rem = 0, deci = 0, mul = 1;
+    while(n > 0){
+        rem = n % 10;
+        deci = deci + rem * mul;
+        n = Math.floor(n / 10);
+        mul = mul * 2;
     }
-    return decimal;
+    return deci;
 }
-
-console.log(convert(11));
+console.log(BintoDeci(10000))
+console.log(BintoDeci(1010))
+console.log(BintoDeci(1111))
+console.log(BintoDeci(10010))
