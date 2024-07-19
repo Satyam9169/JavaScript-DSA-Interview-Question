@@ -22,10 +22,10 @@
 const arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 
 const removeDublicate = (arr) => {
-    let i = 0;
+    let i = 1;
     for (let j = 1; j < arr.length; j++) { // we have treversed the array
-        if (arr[j] !== arr[i]) {
-            arr[i + 1] = arr[j];
+        if (arr[j] !== arr[i - 1]) {
+            arr[i] = arr[j];
             i++;
         }
     }
@@ -41,7 +41,7 @@ const removeDublicate = (arr) => {
     // j has traversed the entire array.
 
     let result = [];
-    for (let k = 0; k <= i; k++) {
+    for (let k = 0; k < i; k++) {
         result[k] = arr[k];
     }
     return result;
