@@ -17,3 +17,8 @@ const countFreq = (arr) => {
 }
 
 console.log(countFreq(arr))
+
+/*
+Time Complexity: O(n + k log k)
+Space Complexity: O(k)
+*/
