@@ -7,7 +7,7 @@ First find the count the freq
 
 const countFreq = (arr) => {
     let map = new Map();
-    for(let num of arr){
+    for (let num of arr) {
         map.set(num, (map.get(num) || 0) + 1); // as of now we have count the freq of an array in key
         // value pair
     }

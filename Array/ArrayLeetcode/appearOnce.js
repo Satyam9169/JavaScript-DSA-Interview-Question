@@ -8,7 +8,6 @@ const appearOnce = (arr) => {
     for(let i = 1; i < n; i++){
         res = res ^ arr[i];
     }
-
     return res;
 }
 

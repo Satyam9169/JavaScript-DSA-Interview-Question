@@ -1,10 +1,10 @@
 // map, filter and reduce output based uestion
 
 let student = [
-    {name: 'Sunil', domain: 'CSE', marks: 63},
-    {name: 'amar', domain: 'ECE', marks: 79},
-    {name: 'sumit', domain: 'CSE', marks: 74},
-    {name: 'gaurav', domain: 'EEE', marks: 77}
+    { name: 'Sunil', domain: 'CSE', marks: 63 },
+    { name: 'amar', domain: 'ECE', marks: 79 },
+    { name: 'sumit', domain: 'CSE', marks: 74 },
+    { name: 'gaurav', domain: 'EEE', marks: 77 }
 ]
 
 // let names = [];
