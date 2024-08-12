@@ -1,15 +1,16 @@
 const sumOfdigit = (num) => {
-    if (num > 9) {
-        let sum = 0, rem;
-        if (num !== 0) {
-            rem = num % 10;
-            num = Math.floor(num / 10);
-            sum = sum + rem;
-        }
-        num = sum;
+  if (num > 9) {
+    let sum = 0,
+      rem;
+    if (num !== 0) {
+      rem = num % 10;
+      num = Math.floor(num / 10);
+      sum = sum + rem;
     }
-    return num;
-}
+    num = sum;
+  }
+  return num;
+};
 
 let number = 123;
 console.log(sumOfdigit(number));

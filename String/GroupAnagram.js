@@ -1,25 +1,24 @@
 let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 function groupAnagram(strs) {
-    let hashmap = {};
-    for (let word of strs) {
-        let count = new Array(256).fill(0);
+  let hashmap = {};
+  for (let word of strs) {
+    let count = new Array(256).fill(0);
 
-        for (let char of word) {
-            let index = char.charCodeAt(0) - 97;
-            count[index]++;
-        }
-
-        const key = count.join('#');
-
-        if (hashmap[key]) {
-            hashmap[key].push(word) // those firs time exists than it will access and create a property in map
-        }
-        else {
-            hashmap[key] = [word]; // if it is already exists with same frequency then it will stored in the same array
-        }
+    for (let char of word) {
+      let index = char.charCodeAt(0) - 97;
+      count[index]++;
     }
-    return Object.values(hashmap);
+
+    const key = count.join("#");
+
+    if (hashmap[key]) {
+      hashmap[key].push(word); // those firs time exists than it will access and create a property in map
+    } else {
+      hashmap[key] = [word]; // if it is already exists with same frequency then it will stored in the same array
+    }
+  }
+  return Object.values(hashmap);
 }
 
 console.log(groupAnagram(strs));
