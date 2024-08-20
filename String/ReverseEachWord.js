@@ -2,7 +2,9 @@
  * @param {string} s
  * @return {string}
  */
-var reverseWords = function (s) {
+let s = 'Lovely Professional University'
+//output : ylevoL lanoisseforP ytisrevinU
+function ReverseEachWord(s) {
     // This is second approach TC => O(n), SC => O(n);
     let word = '', result = '';
     for (let i = 0; i < s.length; i++) {
@@ -43,7 +45,7 @@ var reverseWords = function (s) {
     // }
     // return word.join(' ');
 };
-
+console.log(ReverseEachWord(s))
 /*
 
 This dry run is for second approach
