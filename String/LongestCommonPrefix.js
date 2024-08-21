@@ -43,76 +43,39 @@ const LongCommonPrefix = (str) => {
     }
     return prefix;
 }
-
+let strs = ["flower","flow","flight"];
 console.log(LongCommonPrefix())
 
 /*
-The expression strs[i].indexOf(prefix) is used to check if the string prefix is a prefix of the string strs[i].
+Dry Run of LongCommonPrefix(["flower","flow","flight"])
+Step 1: Initial Setup
 
-Explanation:
-strs[i]: This refers to the current string in the array strs that we are examining.
-indexOf(prefix): This method returns the index of the first occurrence of the specified
-substring (in this case, prefix) within the string strs[i]. If the substring is not found, it returns -1.
+The input array is ["flower", "flow", "flight"].
+prefix = "flower" (assume the first string is the common prefix).
+Step 2: Iterate Through the Strings
 
-In Context:
-When used in the condition strs[i].indexOf(prefix) !== 0, it checks whether the string prefix is at the
-beginning (index 0) of the string strs[i].
+Iteration 1: Compare "flower" with "flow"
 
-Detailed Breakdown:
-indexOf(prefix): Looks for the first occurrence of prefix in strs[i].
-If prefix is found at the beginning of strs[i], indexOf returns 0.
-If prefix is not at the beginning, indexOf returns the index where it first appears
-(which will be greater than 0), or -1 if it does not appear at all.
+i = 1, current string = "flow"
+Check if "flow".indexOf("flower") === 0 → False (the string "flow" does not start with "flower").
+Reduce prefix = "flower".substring(0, 6 - 1) = "flowe".
+Check if "flow".indexOf("flowe") === 0 → False.
+Reduce prefix = "flowe".substring(0, 5 - 1) = "flow".
+Check if "flow".indexOf("flow") === 0 → True.
+Prefix after this iteration: "flow".
+Iteration 2: Compare "flow" with "flight"
 
-*/
+i = 2, current string = "flight"
+Check if "flight".indexOf("flow") === 0 → False (the string "flight" does not start with "flow").
+Reduce prefix = "flow".substring(0, 4 - 1) = "flo".
+Check if "flight".indexOf("flo") === 0 → False.
+Reduce prefix = "flo".substring(0, 3 - 1) = "fl".
+Check if "flight".indexOf("fl") === 0 → True.
+Prefix after this iteration: "fl".
+Step 3: End of Loop
 
-/*
-Dry Run
-Reversing Each String:
-
-const strs = ["flower", "flow", "flight"];
-
-const reversedStrs = strs.map(str => str.split('').reverse().join(''));
-
-console.log(reversedStrs); // Output: ["rewolf", "wolf", "thgilf"]
-strs = ["flower", "flow", "flight"]
-Applying str.split('').reverse().join('') to each string:
-"flower" becomes "rewolf"
-"flow" becomes "wolf"
-"flight" becomes "thgilf"
-reversedStrs becomes ["rewolf", "wolf", "thgilf"]
-Finding the Longest Common Prefix:
-
-javascript
-Copy code
-function longestCommonPrefix(strs) {
-    if (strs.length === 0) return "";
-    let prefix = strs[0];
-    for (let i = 1; i < strs.length; i++) {
-        while (strs[i].indexOf(prefix) !== 0) {
-            prefix = prefix.substring(0, prefix.length - 1);
-            if (prefix === "") return "";
-        }
-    }
-    return prefix;
-}
-
-console.log(longestCommonPrefix(strs)); // Output: "fl"
-Initial strs: ["flower", "flow", "flight"]
-prefix is initialized to "flower"
-Iterating through the array:
-i = 1, strs[1] is "flow"
-"flow".indexOf("flower") !== 0 (true)
-prefix = "flowe"
-"flow".indexOf("flowe") !== 0 (true)
-prefix = "flow"
-"flow".indexOf("flow") === 0 (false)
-i = 2, strs[2] is "flight"
-"flight".indexOf("flow") !== 0 (true)
-prefix = "flo"
-"flight".indexOf("flo") !== 0 (true)
-prefix = "fl"
-"flight".indexOf("fl") === 0 (false)
-Longest common prefix found: "fl"
+The loop completes, and the final value of prefix is "fl".
+Final Output
+The longest common prefix of ["flower", "flow", "flight"] is "fl".
 
 */
