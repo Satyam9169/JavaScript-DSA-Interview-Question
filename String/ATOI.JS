@@ -121,7 +121,8 @@ const ATOI = (s) => {
     return result * sign
 }
 
-const isDigit = char => /^[0-9]$/.test(char);
+// const isDigit = char => /^[0-9]$/.test(char);
+const isDigit = char => char >= 0 && char <= 9 // you can also write this way
 
 console.log(ATOI("words and 987"));
 console.log(ATOI("1337c0d3"));
@@ -129,6 +130,13 @@ console.log(ATOI(" -042"));
 console.log(ATOI("42"));
 console.log(ATOI("0-1"));
 
+/*
+0
+1337
+-42
+42
+0
+*/
 /*
 Dry Run:
 Input: " -42"
