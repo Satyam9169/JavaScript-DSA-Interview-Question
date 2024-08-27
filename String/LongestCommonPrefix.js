@@ -43,7 +43,7 @@ const LongCommonPrefix = (str) => {
     }
     return prefix;
 }
-let strs = ["flower","flow","flight"];
+let strs = ["flower", "flow", "flight"];
 console.log(LongCommonPrefix())
 
 /*
