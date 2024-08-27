@@ -1,6 +1,36 @@
 /* 
 1. Reverse each word of a given sentence. E.g., Hello kaise ho --> olleh esiak olleh
 
+let string = "Hello kaise ho";
+let reverseString = string.split(" ").map((word) => {
+  return word.split("").reverse().join("")
+}).join(" ");
+console.log(reverseString);
+
+TRY WITHOUT USING INBUILT FUNCTION
+let s = 'Lovely Professional University'
+output : ylevoL lanoisseforP ytisrevinU
+function ReverseEachWord(s) {
+ let word = s.split(' ');
+    function reverse(arr) {
+        let str = arr.split('');
+        let start = 0, end = str.length - 1;
+        while (start <= end) {
+            let temp = str[start];
+            str[start] = str[end];
+            str[end] = temp;
+            start = start + 1;
+            end = end - 1;
+        }
+        return str.join('');
+    }
+    for (let i = 0; i < word.length; i++) {
+        word[i] = reverse(word[i]);
+    }
+    return word.join(' ');
+}
+console.log(ReverseEachWord(s))
+
 2. How to check if an object is an array or not? Provide some code.
 let arr = [];
 if(Array.isArray(arr)){
@@ -45,7 +75,39 @@ let num = 123;
 let reverse = Number(num.toString().split('').reverse().join(''))
 console.log(reverse)
 
+7. Write a javascript function that checks whether a passed string
+ is palindrome or not
+ let str = "abcba";
+ 
+ const checkPalin = (str) => {
+     let start = 0, end = str.length - 1;
+     while (start <= end) {
+         if (str[start] !== str[end]) {
+             console.log("not a palindrome");
+             return;
+         }
+         start = start + 1;
+         end = end - 1;
+     }
+     console.log("palindrome")
+ }
+ 
+ checkPalin(str)
+
+ 9. Write a js function that accepts a string as a parameter and conversts
+  the first letter of each word of the string in upper case.
 */
+
+let string = "lovely professional university"
+const captilizedFirstLetter = (string) => {
+    const allWord = string.split(" ").map((str) => {
+        const firsLetter = str.charAt(0).toUpperCase();
+        return firsLetter + str.slice(1);
+    })
+    return allWord.join(" ");
+}
+console.log(captilizedFirstLetter(string));
+
 
 
 
