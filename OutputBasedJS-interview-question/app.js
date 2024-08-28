@@ -276,7 +276,19 @@ function shuffle(arr, n){
 console.log(shuffle([1,2,3,4,5,6], 3))
 output = [1, 4, 2, 5, 3, 6]
 This is when interviewer said to randomly suffle the array
+
+20. write a Javascript program to compute the union of two
+ Arrays. Note: in union repetition of element is not allowed.
+
+ function union(arr1, arr2){
+     let concatArr = [...arr1, ...arr2];
+     let uniorArr = new Set(concatArr);
+     return uniorArr;
+ }
+ console.log(union([1, 2, 3], [2, 3, 4]));
+
 */
+
 
 
 
