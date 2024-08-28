@@ -96,17 +96,189 @@ console.log(reverse)
 
  9. Write a js function that accepts a string as a parameter and conversts
   the first letter of each word of the string in upper case.
+  let string = "lovely professional university"
+  const captilizedFirstLetter = (string) => {
+      const allWord = string.split(" ").map((str) => {
+          const firsLetter = str.charAt(0).toUpperCase();
+          return firsLetter + str.slice(1);
+      })
+      return allWord.join(" ");
+  }
+  console.log(captilizedFirstLetter(string));
+
+
+MyQ. What is the difference between slice, substring and substr.
+Parameters:
+slice() and substring() take startIndex and endIndex (not included).
+substr() takes startIndex and length.
+Example
+
+let str = "hello bhai kaise ho"
+console.log(str.slice(3, 6));
+console.log(str.substring(3, 6));
+console.log(str.substr(2, 6))
+
+10 - write a js function which accepts an argument and returns the type
+Note: There are six possible values that typeof returns : object, boolean,
+function, number, string, and undefined.
+
+function giveType(arg){
+    return typeof arg;
+}
+console.log(giveType([]))
+
+In JavaScript, typeof is an operator that returns a string indicating the type of the operand.
+When you use typeof on an array, it returns "object" because arrays in JavaScript are indeed a
+type of object.
+
+Objects: In JavaScript, almost everything is an object. Objects are collections of properties 
+and values. Arrays are a special type of object that are used to store ordered collections of values.
+
+Arrays: While arrays are technically objects, they have special properties and methods that 
+allow them to function as arrays. However, they still inherit from the Object prototype, 
+which is why typeof an array returns "object".
+
+11. Write a javascript function to get the number of occurrences of each
+    letter in specified string.
+    
+    const FindOccurence = (str) => {
+        let map = new Map();
+        for(let num of str){
+            if(map.has(num)){
+                map.set(num, map.get(num) + 1);
+            }else{
+                map.set(num, 1);
+            }
+        }
+        return map;
+    }
+    console.log(FindOccurence("alpha"));
+
+12. Loop an array and add all members of it.
+let arr = [4,8,9,2,1];
+const ArraySum = (arr) => {
+    let sum = 0;
+    for(let num of arr){
+        sum += num;
+    }
+    return sum;
+}
+
+console.log(ArraySum(arr))
+
+13. In an array of numbers
+and strings, only add those numbers which are not strings.
+let arr = ["alpha", 223, "beta", 345, 345, "dkj"];
+const FindNumber = (arr) => {
+    let sum = 0;
+    for(let num of arr){
+        if(typeof num === 'number'){
+            sum += num;
+        }
+    }
+    return sum;
+}
+console.log(FindNumber(arr))
+
+14. loop an array of objects
+and remove all objects which don't have gender's value male
+const arr = [
+  { name: "manas", gender: "male" },
+  { name: "mansi", gender: "female" },
+  { name: "muskan", gender: "female" },
+  { name: "harshit", gender: "female" },
+  { name: "random", gender: "other" },
+];
+const maleArr = arr.filter(obj => obj.gender === "male")
+console.log(maleArr)
+
+15. Write a js function to clone an array
+a = [1,2,3,4];
+b = a; 
+this not clones the array, it takes the reference of array
+
+
+Method-1 
+function cloneArr(arr){
+    return [...arr];
+}
+const arr = [1,2,3,4];
+const newArr = cloneArr(arr);
+console.log(newArr);
+
+Method-2
+const CloneArr = (arr) => {
+    arr.map(ele => ele);
+    return arr;
+}
+
+const arr = [1,2,3,4];
+const newArr = CloneArr(arr);
+console.log(newArr);
+
+M-3
+function CloneArr = (arr) => {
+    let newArr = []
+    for(let i = 0; i < arr.length; i++){
+        newArr.push(arr[i])
+    }
+    return newArr;    
+}
+let arr = [1,2,3,4,5]
+console.log(CloneArr(arr));
+
+17. write a javascript function to get the last element of an array.
+passing a parameter 'n' will return the last 'n' elements of the array.
+function retrieveFromLast(arr, n = 1){
+    if(n > arr.length){
+        console.log(n + "not a element in an array");
+        return;
+    }
+    for(let i = 0; i < n; i++){
+        console.log(arr[arr.length - i  - 1])
+    }
+}
+retrieveFromLast([1, 3, 5, 8], 3);
+
+18. write a javascript program to find the most frequent item of an array.
+
+const mostFrequent = (arr) => {
+   let freq = {};
+   for(let i = 0; i < arr.length; i++){
+    if(freq[arr[i]]){
+        freq[arr[i]]++;
+    }else{
+        freq[arr[i]] = 1;
+     }
+   }
+
+   let maxFreq = Math.max(...Object.values(freq));
+   let mostFrequentElements = Objects.keys(freq).filter(key => freq[key] === maxFreq);
+   return mostFrequentElements;
+}
+
+console.log(mostFrequent([1, 2, 4, 7, 3, 4, 4, 3, 2, 2, 3, 3, 2]))
+
+19. write a js program to shuffle an array.
+This is the process of when n value is given
+function shuffle(arr, n){
+    let len = arr.length;
+    let array = new Array(n * 2);
+    let j = 0;
+    for(let i = 0; i < len; i++){
+        array[j] = arr[i];
+        j++;
+        array[j] = arr[n + i];
+        j++;
+    }
+    return array;
+}
+console.log(shuffle([1,2,3,4,5,6], 3))
+output = [1, 4, 2, 5, 3, 6]
+This is when interviewer said to randomly suffle the array
 */
 
-let string = "lovely professional university"
-const captilizedFirstLetter = (string) => {
-    const allWord = string.split(" ").map((str) => {
-        const firsLetter = str.charAt(0).toUpperCase();
-        return firsLetter + str.slice(1);
-    })
-    return allWord.join(" ");
-}
-console.log(captilizedFirstLetter(string));
+
 
 
 
