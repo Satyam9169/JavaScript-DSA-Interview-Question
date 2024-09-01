@@ -288,12 +288,3 @@ This is when interviewer said to randomly suffle the array
  console.log(union([1, 2, 3], [2, 3, 4]));
 
 */
-
-
-
-
-
-
-
-
-

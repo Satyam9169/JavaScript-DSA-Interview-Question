@@ -27,7 +27,6 @@ subarray in array
 
 // subArray(arr)
 
-
 // Maximum subarray sum
 
 // using brute force approach
@@ -47,17 +46,18 @@ subarray in array
 //     }
 //     return maxSum;
 // }
-let num = [4, -4, 6, -6, 10, -11, 12]
+let num = [4, -4, 6, -6, 10, -11, 12];
 console.log(maximumSubArray(num));
 
 function maximumSubArray(arr) {
-    let maxSum = -Infinity, sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum = sum + arr[i];
-        maxSum = Math.max(maxSum, sum);
-        if (sum < 0) {
-            sum = 0;
-        }
+  let maxSum = -Infinity,
+    sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+    maxSum = Math.max(maxSum, sum);
+    if (sum < 0) {
+      sum = 0;
     }
-    return maxSum;
+  }
+  return maxSum;
 }
