@@ -1,21 +1,23 @@
 function anagram(str1, str2) {
      //This is optimised approach 
      //Complexity Analysis => Time Complexity => O(n) and Space Complexity => O(1)
-     let map = new Map()
-     for (let num of str1) {
-          if (map.has(num)) {
-               map.set(num, map.get(num) + 1);
-          } else {
-               map.set(num, 1);
-          }
-     }
+     if (s.length !== t.length) return false;
 
-     for (let num of str2) {
-          if (!map.has(num))
-               return false;
-          map.set(num, -1);
-     }
-     return true;
+    let charCount = {}
+    for (let char of s) {
+        if (charCount[char]) {
+            charCount[char]++;
+        } else {
+            charCount[char] = 1;
+        }
+    }
+
+    for (let char of t) {
+        if (!charCount[char]) return false;
+        charCount[char]--;
+    }
+
+    return true;
      // This is first method of this string
      // str1 = str1.toLowerCase().replace(/[^a-z0-9]/g, '');
      // str2 = str2.toLowerCase().replace(/[^a-z0-9]/g, '');

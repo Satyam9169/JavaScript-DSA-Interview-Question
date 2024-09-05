@@ -1,5 +1,6 @@
 // let nums1 = [1, 2, 2, 1], nums2 = [2, 2];
 let nums1 = [4, 9, 5], nums2 = [9, 4, 9, 8, 4];
+// output : [ 9, 4 ]
 const Intersection = (nums1, nums2) => {
     const newArray = [];
     let map = new Map()
@@ -12,7 +13,7 @@ const Intersection = (nums1, nums2) => {
         }
     }
 
-   // compare if it is existing push in newArray
+    // compare if it is existing push in newArray
     for (let num of nums2) {
         if (map.has(num) && map.get(num) > 0) {
             newArray.push(num);
