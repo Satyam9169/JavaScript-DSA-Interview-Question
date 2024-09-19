@@ -17,7 +17,7 @@ function LongestPalindromicSubstring(s) {
         let even = expandAroundCenter(s, i, i + 1);
         let len = Math.max(odd, even);
         if (len > end - start) {
-            start = i - Math.floor((len) / 2);
+            start = i - Math.floor((len - 1) / 2);
             end = i + Math.floor(len / 2);
         }
     }
