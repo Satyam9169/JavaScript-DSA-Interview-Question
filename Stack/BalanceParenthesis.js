@@ -8,11 +8,7 @@ const isValid = (str) => {
       if (isEmpty(char)) return false;
 
       const top = stack.pop();
-      if (
-        (char === ")" && top !== "(") ||
-        (char === "]" && top !== "[") ||
-        (char === "}" && top !== "{")
-      ) {
+      if ((char === ")" && top !== "(") || (char === "]" && top !== "[") || (char === "}" && top !== "{")) {
         return false;
       }
     }
@@ -21,6 +17,7 @@ const isValid = (str) => {
 };
 
 const isEmpty = (str1) => str1.length === 0;
+
 console.log(isValid("({[]})"));
 console.log(isValid("([]{})"));
 console.log(isValid("{[()]}"));
