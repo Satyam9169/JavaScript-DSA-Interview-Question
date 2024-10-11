@@ -1,14 +1,15 @@
 const print = (i) => {
-    if(i > 10){
+  if (i > 10) {
     return;
-    }
-    console.log(i);
-    print(i + 1)
-}
+  }
+  console.log(i);
+  print(i + 1);
+};
 let i = 0;
-print(i)
+print(i);
 
-// In the print function, the reason the values are printed from 10 to 1 is because of the recursive call order and the fact that the console.log(i) statement is placed after the recursive call.
+// In the print function, the reason the values are printed from 10 to 1 is because of
+// the recursive call order and the fact that the console.log(i) statement is placed after the recursive call.
 
 // Here’s what happens step by step:
 
