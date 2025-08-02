@@ -32,15 +32,15 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
 let num = 5;
 // let n = 3;
 const TrailingZeroes = (n) => {
-    if (n < 5) {
-        return 0;
-    } else {
-        let count = 0;
-        while (n >= 5) {
-            count = count + Math.floor(n / 5);
-            n = Math.floor(n / 5);
-        }
-        return count;
+  if (n < 5) {
+    return 0;
+  } else {
+    let count = 0;
+    while (n >= 5) {
+      count = count + Math.floor(n / 5);
+      n = Math.floor(n / 5);
     }
-}
+    return count;
+  }
+};
 console.log(TrailingZeroes(num));
