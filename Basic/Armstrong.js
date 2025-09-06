@@ -14,3 +14,5 @@ const Armstrong = (num) => {
 };
 
 console.log(Armstrong(153));
+console.log(Armstrong(123)); // No
+console.log(Armstrong(9474)); // Yes
