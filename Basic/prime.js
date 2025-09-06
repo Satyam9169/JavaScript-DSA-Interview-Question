@@ -16,36 +16,36 @@
 
 //2nd way
 const isPrime = (n) => {
-    if (n <= 1) {
-        return false;
-    }
+  if (n <= 1) {
+    return false;
+  }
 
-    for(let i = 2; i < n/2; i++){
-        if(n % i == 0){
-            return false;
-        }
+  for (let i = 2; i < n / 2; i++) {
+    if (n % i == 0) {
+      return false;
     }
-    return true;
-}
+  }
+  return true;
+};
 
 // if i need to print the till 1100 prime numbers
 
 const main = () => {
-    let number = 1100, primeNumber = "", total = 0;
-    for (let num = 2; num < number; num++) {
-        if (isPrime(num)) {
-            primeNumber += num + " ";
-            total++;
-        }
+  let number = 1100,
+    primeNumber = "",
+    total = 0;
+  for (let num = 2; num < number; num++) {
+    if (isPrime(num)) {
+      primeNumber += num + " ";
+      total++;
     }
-    console.log(primeNumber);
-    console.log('Total prime no : ' + total);
-}
-main()
-
+  }
+  console.log(primeNumber);
+  console.log("Total prime no : " + total);
+};
+main();
 
 // isPrime(11) ? console.log('true') : console.log('false');
-
 
 // 3rd way
 // const isPrime = (n) => {
@@ -65,4 +65,3 @@ main()
 // }
 
 // isPrime(11) ? console.log('true') : console.log('false');
-

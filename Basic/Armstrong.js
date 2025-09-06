@@ -1,16 +1,16 @@
 const Armstrong = (num) => {
   let n = num;
   let arm = 0;
-  while (num != 0) {
-    let mod = num % 10;
-    arm = arm + mod * mod * mod;
-    num = Math.floor(num / 10);
+  let k = String(num).length;
+  while (n != 0) {
+    let mod = n % 10;
+    arm = arm + Math.pow(mod, k);
+    n = Math.floor(n / 10);
   }
-  if (arm == n) {
+  if (arm == num) {
     return "Yes";
   }
   return "No";
-  // return arm;
 };
 
 console.log(Armstrong(153));

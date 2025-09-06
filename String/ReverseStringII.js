@@ -26,25 +26,26 @@ s consists of only lowercase English letters.
 1 <= k <= 104
 */
 
-let str = "abcdefg", k = 2;
+let str = "abcdefg",
+  k = 2;
 
 function ReverseString(str, k) {
-    let arr = str.split('');
-    function reverse(start, end) {
-        while (start <= end) {
-            let temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start = start + 1;
-            end = end - 1;
-        }
+  let arr = str.split("");
+  function reverse(start, end) {
+    while (start <= end) {
+      let temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start = start + 1;
+      end = end - 1;
     }
+  }
 
-    for (let i = 0; i < str.length; i += 2 * k) {
-        end = Math.min(i + k - 1, arr.length - 1);
-        reverse(i, end);
-    }
-    return arr.join('');
+  for (let i = 0; i < str.length; i += 2 * k) {
+    end = Math.min(i + k - 1, arr.length - 1);
+    reverse(i, end);
+  }
+  return arr.join("");
 }
 
 console.log(ReverseString(str, k));

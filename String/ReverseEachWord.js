@@ -2,50 +2,51 @@
  * @param {string} s
  * @return {string}
  */
-let s = 'Lovely Professional University'
+let s = "Lovely Professional University";
 //output : ylevoL lanoisseforP ytisrevinU
 function ReverseEachWord(s) {
-    // This is second approach TC => O(n), SC => O(n);
-    let word = '', result = '';
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] === ' ') {
-            result += reverse(word) + ' ';
-            word = '';
-        } else {
-            word += s[i];
-        }
+  // This is second approach TC => O(n), SC => O(n);
+  let word = "",
+    result = "";
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === " ") {
+      result += reverse(word) + " ";
+      word = "";
+    } else {
+      word += s[i];
     }
-    result += reverse(word);
-    return result;
+  }
+  result += reverse(word);
+  return result;
 
-    function reverse(str) {
-        let reversed = '';
-        for (let i = str.length - 1; i >= 0; i--) {
-            reversed += str[i];
-        }
-        return reversed;
+  function reverse(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversed += str[i];
     }
-    // THIS IS SECOND APPROACH 
-    // This is first approach
-    // let word = s.split(' ');
-    // function reverse(arr) {
-    //     let str = arr.split('');
-    //     let start = 0, end = str.length - 1;
-    //     while (start <= end) {
-    //         let temp = str[start];
-    //         str[start] = str[end];
-    //         str[end] = temp;
-    //         start = start + 1;
-    //         end = end - 1;
-    //     }
-    //     return str.join('');
-    // }
-    // for (let i = 0; i < word.length; i++) {
-    //     word[i] = reverse(word[i]);
-    // }
-    // return word.join(' ');
-};
-console.log(ReverseEachWord(s))
+    return reversed;
+  }
+  // THIS IS SECOND APPROACH
+  // This is first approach
+  // let word = s.split(' ');
+  // function reverse(arr) {
+  //     let str = arr.split('');
+  //     let start = 0, end = str.length - 1;
+  //     while (start <= end) {
+  //         let temp = str[start];
+  //         str[start] = str[end];
+  //         str[end] = temp;
+  //         start = start + 1;
+  //         end = end - 1;
+  //     }
+  //     return str.join('');
+  // }
+  // for (let i = 0; i < word.length; i++) {
+  //     word[i] = reverse(word[i]);
+  // }
+  // return word.join(' ');
+}
+console.log(ReverseEachWord(s));
 /*
 
 This dry run is for second approach

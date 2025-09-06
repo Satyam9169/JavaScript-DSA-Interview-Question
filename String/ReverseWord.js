@@ -1,35 +1,35 @@
 // Time complexity => O(n), Space Complexity => O(n);
 
-
 // THIS IS FIRST APPROACH
-
+// "the sky is blue"
 function ReverseWord(str) {
-    let word = '', result = '', len = str.length;
-    for (let i = 0; i < len; i++) {
-        let char = str.charAt(i)
-        if (char !== ' ') {
-            word += char;
-        } else if (word.length > 0) {
-            result = " " + word + result;
-            word = "";
-        }
+  let word = "",
+    result = "",
+    len = str.length;
+  for (let i = 0; i < len; i++) {
+    let char = str.charAt(i);
+    if (char !== " ") {
+      word += char;
+    } else if (word.length > 0) {
+      result = " " + word + result;
+      word = "";
     }
+  }
 
-    if (word.length > 0) {
-        result = " " + word + result;
-    }
+  if (word.length > 0) {
+    result = " " + word + result;
+  }
 
-    return result.trim();
+  return result.trim();
 }
 
-
-console.log(ReverseWord('satyam agrahari'));
+console.log(ReverseWord("satyam agrahari"));
 //agrahari satyam
-console.log(ReverseWord('  Hello World  '));
+console.log(ReverseWord("  Hello World  "));
 //" word Hello "
-console.log(ReverseWord('the sky is blue'));
+console.log(ReverseWord("the sky is blue"));
 //"blue is the sky the"
-console.log(ReverseWord('a good   example'));
+console.log(ReverseWord("a good   example"));
 // "example good a"
 
 /*
@@ -73,9 +73,6 @@ The function returns "world hello".
 Conclusion:
 The dry run shows that the code correctly reverses the words and handles leading/trailing/multiple spaces efficiently. The final output matches the expected result.
 */
-
-
-
 
 //This was my second approach
 
@@ -160,6 +157,3 @@ Conclusion:
 The dry run shows that the code correctly reverses the words and handles
 leading/trailing/multiple spaces efficiently. The final output matches the expected result.
 */
-
-
-

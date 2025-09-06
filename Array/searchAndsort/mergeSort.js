@@ -15,10 +15,12 @@ const merge = (arr) => {
 
   return mergeSort(merge(left), merge(right));
 };
+
 const mergeSort = (left, right) => {
   let leftIndex = 0;
   let rightIndex = 0;
   let result = [];
+
   while (leftIndex < left.length && rightIndex < right.length) {
     if (left[leftIndex] < right[rightIndex]) {
       result.push(left[leftIndex]);
